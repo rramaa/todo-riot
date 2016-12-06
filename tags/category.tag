@@ -33,7 +33,9 @@
 		}
 
 		selectCategory(e){
-			this.opts.observable.trigger("change_category", e.item.val.id);
+			var id = e.item.val.id
+			this.opts.route("category/" + id);
+			this.opts.observable.trigger("change_category", id);
 		}
 
 	</script>

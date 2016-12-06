@@ -51,6 +51,9 @@
 	})
 
 	this.opts.observable.on("change_category", (data) => {
+		if(data == this.selectedCategory){
+			return;
+		}
 		this.selectedCategory = data;
 		this.update();
 	})
